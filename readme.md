@@ -1,7 +1,8 @@
 # Opengraph based link preview service
-### A python service to return link preview metadata, also has memcache for caching 
+A simple python service to return link preview metadata, also has memcache for caching 
 
-## Design
+### Design
 WIP
 
-## Development Setup
+### Development Setup
+

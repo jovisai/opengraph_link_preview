@@ -6,10 +6,13 @@ from flask import make_response
 from flask import request
 from flask_expects_json import expects_json
 from webpreview import webpreview
+from flask_cors import CORS
 
 from cache.methods import get_from_cache, set_to_cache
 
 app = Flask(__name__)
+
+CORS(app)
 
 logging.basicConfig(level=logging.DEBUG,
                     format=f'%(asctime)s %(levelname)s %(name)s %(threadName)s : %(message)s')
