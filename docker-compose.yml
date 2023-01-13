@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  opengraph_link_preview:
+    image: jovisai/opengraph_link_preview:latest
+    build: ./
+    volumes:
+      - ./:/usr/src/app/
+    ports:
+      - '8000:8000'
+    restart: always
