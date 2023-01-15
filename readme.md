@@ -17,7 +17,7 @@ sudo apt install memecached -y
 ### With docker
 You need not use the docker files if you don't wish to containerize the service, You can use this as a regular
 flask application. 
-But if you would like to use the docker enginer, you can refer to the [docker setup guide ](https://docs.docker.com/get-docker/)
+But if you would like to use the docker engine, you can refer to the [docker setup guide ](https://docs.docker.com/get-docker/)
 
 To build the docker container you can run the below command
 ```commandline
@@ -49,7 +49,7 @@ memcache initialization 127.0.0.1 11211
 ```
 
 As you can see, the project uses gunicorn WSGI server for deployment. 
-The last line confirms that memcache connection successfull. If you wish to change the connection parameters in case
+The last line confirms that memcache connected successfully. If you wish to change the connection parameters in case
 your memcache is hosted somewhere else then change the config in the .env file. 
 
 To test the api from command line you can try the below-mentioned curl command:
@@ -72,7 +72,7 @@ You can expect a json output in the below format
 }
 ```
 
-### The public docker respository for this project
+### The public docker repository for this project
 https://hub.docker.com/r/jovisai/opengraph_link_preview
 
 
