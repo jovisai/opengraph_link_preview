@@ -1,6 +1,6 @@
 from http import HTTPStatus
 
-from flask import Flask, jsonify
+from flask import Flask
 from flask import make_response
 from flask_cors import CORS
 
@@ -13,7 +13,15 @@ def create_app():
 
     @_app.route('/are_you_alive')
     def are_you_alive():
-        return make_response(jsonify({"msg": "Hello from Link service"}), HTTPStatus.OK)
+        return make_response({"message": "Hello from Link service"}, HTTPStatus.OK)
+
+    @_app.errorhandler(500)
+    def internal_server_error(error):
+        return make_response({"message": error.description}, HTTPStatus.INTERNAL_SERVER_ERROR)
+
+    @_app.errorhandler(404)
+    def not_found_error(error):
+        return make_response({"message": error.description}, HTTPStatus.NOT_FOUND)
 
     # resister the blueprints.
     _app.register_blueprint(v1_blueprint, url_prefix='/v1')
