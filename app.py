@@ -24,7 +24,7 @@ def create_app():
         return make_response({"message": error.description}, HTTPStatus.NOT_FOUND)
 
     # resister the blueprints.
-    _app.register_blueprint(v1_blueprint, url_prefix='/v1')
+    _app.register_blueprint(v1_blueprint, url_prefix='/link-service/v1')
 
     return _app
 

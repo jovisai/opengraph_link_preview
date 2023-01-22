@@ -54,7 +54,7 @@ your memcache is hosted somewhere else then change the config in the .env file.
 
 To test the api from command line you can try the below-mentioned curl command:
 ```commandline
-curl --location --request POST 'http://localhost:8000/v1' \
+curl --location --request POST 'http://localhost:8000/link-service/v1' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"link": "https://en.wikipedia.org/wiki/Twenty_Thousand_Leagues_Under_the_Seas"
